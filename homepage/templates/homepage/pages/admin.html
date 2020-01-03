@@ -1,0 +1,48 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+#font {
+    font-size: 18px;
+}
+
+</style>
+
+ 	<section id="head" class="secondary">
+            <div class="container">
+                    <h5 class="pt-4"> SHS Staff</h5>                    
+                    Administration > Non-Faculty
+
+                </div>
+    </section>
+
+    <br><br>
+    
+    <div class="container pt-5">
+        <div class="row">
+          
+{% if user.is_authenticated %}
+<li class="nav-item">
+  <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+</li>
+{% else %}
+<li class="nav-item">
+  <a class="nav-link" href="{% url 'login' %}">Login</a>
+</li>
+{% endif %}            
+
+{% if user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'logout' %}">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="/attendance">Login</a>
+            </li>
+            {% endif %}
+        </div>
+      </div>
+
+ {% endblock %}
+

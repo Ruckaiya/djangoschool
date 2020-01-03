@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<div class='col-md-8 offset-md-2'>
+    <h2>{{classroom.name}} Attendance</h2>
+    <form action="" method='post'>
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type='submit' class='btn btn-primary'>Submit</button>
+    </form>
+</div>
+{% endblock %}

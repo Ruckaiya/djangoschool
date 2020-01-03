@@ -1,0 +1,32 @@
+{% extends 'homepage/base.html' %}
+{% load static %}
+{% block content %}
+
+<style>
+
+
+</style>
+
+ 	<section id="head" class="secondary">
+            <div class="container">
+                    <h5 class="pt-4"> Academic Calender</h5>                    
+                    Students > Academic Calender
+
+                </div>
+    </section>
+
+
+    <br> 
+    <br>
+
+    <!-- container -->
+    <section class="container pt-5">
+        <div class="row">
+            <a href="{{ my_model_instance.pdf.url }}">Download </a>
+        </div>
+    </section>
+  
+
+  
+
+ {% endblock %}
